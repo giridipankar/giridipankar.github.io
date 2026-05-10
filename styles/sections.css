@@ -1,0 +1,60 @@
+/* sections.css — Shared section layout, labels, reveal animation, and common .tag */
+
+section {
+  padding: 80px 24px;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-tag {
+  font-size: 11px;
+  font-weight: 300;
+  font-family: 'DM Mono', monospace;
+  color: var(--muted);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+.section-sub {
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 300;
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Common Tag Pill (used across Experience, Projects) ── */
+.tag {
+  font-size: 11px;
+  font-family: 'DM Mono', monospace;
+  padding: 3px 9px;
+  border-radius: 5px;
+  background: var(--faint);
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}

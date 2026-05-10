@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dipankar Giri — Senior Software Engineer</title>
+  <meta name="description" content="Senior Software Engineer building scalable iOS & Android experiences. 4+ years in fintech & product-focused environments.">
+
+  <!-- Gilroy (Light 300 + ExtraBold 800) via cdnfonts -->
+  <link rel="preconnect" href="https://fonts.cdnfonts.com">
+  <link href="https://fonts.cdnfonts.com/css/gilroy-free" rel="stylesheet">
+  <!-- DM Mono for monospace labels (Gilroy has no mono variant) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!--
+    Stylesheet load order:
+    1. globals   — reset, CSS custom properties, base typography
+    2. nav       — fixed navigation bar
+    3. hero      — hero layout, phone mockup, floating cards
+    4. sections  — shared section chrome + .reveal + .tag
+    5. experience
+    6. projects
+    7. contributions
+    8. footer
+    9. responsive — breakpoint overrides (always last)
+  -->
+  <link rel="stylesheet" href="styles/globals.css">
+  <link rel="stylesheet" href="styles/nav.css">
+  <link rel="stylesheet" href="styles/hero.css">
+  <link rel="stylesheet" href="styles/sections.css">
+  <link rel="stylesheet" href="styles/experience.css">
+  <link rel="stylesheet" href="styles/projects.css">
+  <link rel="stylesheet" href="styles/contributions.css">
+  <link rel="stylesheet" href="styles/footer.css">
+  <link rel="stylesheet" href="styles/responsive.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">DG<span>.</span></div>
+  <div class="nav-links">
+    <a href="#experience" class="nav-link">Experience</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contributions" class="nav-link">Contributions</a>
+  </div>
+  <a href="mailto:dipankargiri1122@gmail.com" class="nav-cta">Let's Talk →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-badge">● Available for new opportunities</div>
+      <h1 class="hero-name">Dipankar<br><span>Giri.</span></h1>
+      <p class="hero-title">Sr. Software Engineer</p>
+      <p class="hero-bio">Building scalable mobile experiences for Android &amp; iOS. 4+ years shipping production apps in fintech &amp; product-led environments. Passionate about mobile architecture, performance, and AI integrations.</p>
+      <div class="chips">
+        <span class="chip blue">React Native</span>
+        <span class="chip blue">TypeScript</span>
+        <span class="chip teal">Redux Toolkit</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">GraphQL</span>
+        <span class="chip teal">LLM / AI</span>
+      </div>
+      <div class="platform-badges">
+        <div class="platform-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+          iOS
+        </div>
+        <div class="platform-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 16l-2-7h18l-2 7H5z"/><circle cx="8.5" cy="19.5" r="1.5"/><circle cx="15.5" cy="19.5" r="1.5"/><path d="M9 8V5l3-3 3 3v3"/></svg>
+          Android
+        </div>
+        <div class="platform-badge">📍 Gurugram, India</div>
+      </div>
+      <div class="hero-links" style="margin-top:28px">
+        <a href="#" class="btn btn-primary">↓ Resume</a>
+        <a href="https://linkedin.com" class="btn btn-ghost">LinkedIn</a>
+        <a href="https://github.com" class="btn btn-ghost">GitHub</a>
+        <a href="mailto:dipankargiri1122@gmail.com" class="btn btn-ghost">Email</a>
+      </div>
+    </div>
+    <div class="phone-scene">
+      <div class="floating-card fc1">
+        <div class="fc-label">CRASH-FREE RATE</div>
+        <div class="fc-val fc-green">99.8%</div>
+      </div>
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-header">
+            <div>
+              <div style="font-size:9px;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:.5px">GOOD MORNING</div>
+              <div style="font-size:13px;font-weight:800;font-family:'Gilroy',sans-serif">Dipankar</div>
+            </div>
+            <div class="phone-avatar"></div>
+          </div>
+          <div class="phone-stat-row">
+            <div class="phone-stat"><div class="label">PORTFOLIO</div><div class="val">₹4.2L</div></div>
+            <div class="phone-stat"><div class="label">RETURNS</div><div class="val" style="color:var(--teal)">+12.4%</div></div>
+          </div>
+          <div class="phone-chart">
+            <div class="phone-chart-line"></div>
+          </div>
+          <div class="phone-list-item"><div class="phone-list-dot" style="background:var(--blue)"></div><div class="phone-list-text"><div class="t">HDFC Midcap 50</div><div class="s">Mutual Fund</div></div><div class="phone-list-num">+8.3%</div></div>
+          <div class="phone-list-item"><div class="phone-list-dot" style="background:var(--teal)"></div><div class="phone-list-text"><div class="t">Zerodha ETF</div><div class="s">ETF</div></div><div class="phone-list-num">+5.1%</div></div>
+          <div class="phone-list-item"><div class="phone-list-dot" style="background:var(--purple)"></div><div class="phone-list-text"><div class="t">SBI Bluechip</div><div class="s">Mutual Fund</div></div><div class="phone-list-num">+3.7%</div></div>
+        </div>
+      </div>
+      <div class="floating-card fc2">
+        <div class="fc-label">APP STORE RATING</div>
+        <div class="fc-val fc-blue">4.8 ★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--bg2)">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-tag">01 — Journey</div>
+      <h2 class="section-title">Experience</h2>
+      <p class="section-sub">4+ years building mobile products that ship at scale, with a focus on architecture, performance, and product ownership.</p>
+    </div>
+    <div class="exp-grid reveal">
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">Groww</div>
+            <div class="exp-role">Sr. Software Engineer — Mobile Platform</div>
+          </div>
+          <div class="exp-period">Mar 2023 – Present</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Led end-to-end rebuild of the investment discovery module; improved time-to-invest by 40%</li>
+          <li>Architected feature-flag driven A/B testing framework adopted across 3 squads</li>
+          <li>Reduced app bundle size by 28% via code-splitting and lazy imports strategy</li>
+          <li>Mentored 2 junior engineers; introduced pair-programming norms and internal RFCs</li>
+          <li>Integrated AI-powered portfolio advisor using OpenAI API with custom function calling</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">Redux Toolkit</span><span class="tag">React Query</span><span class="tag">OpenAI SDK</span><span class="tag">Detox</span>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">Razorpay</div>
+            <div class="exp-role">React Native Engineer — Payments SDK</div>
+          </div>
+          <div class="exp-period">Aug 2021 – Feb 2023</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Built the Razorpay Checkout native SDK wrapper (RN) shipped to 200K+ merchants</li>
+          <li>Implemented biometric UPI flow reducing checkout friction by 35%</li>
+          <li>Drove migration from class components to hooks + Context API across the SDK</li>
+          <li>Maintained native bridge modules for iOS (Obj-C) and Android (Kotlin)</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">React Native</span><span class="tag">Native Modules</span><span class="tag">Kotlin</span><span class="tag">Obj-C</span><span class="tag">UPI</span>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-header">
+          <div>
+            <div class="exp-company">Wingman (YC S21)</div>
+            <div class="exp-role">Mobile Engineer — Product</div>
+          </div>
+          <div class="exp-period">Jun 2020 – Jul 2021</div>
+        </div>
+        <ul class="exp-bullets">
+          <li>Sole mobile engineer — shipped iOS + Android app from 0→1 in 6 weeks</li>
+          <li>Integrated real-time sales coaching engine via WebSocket with &lt;100ms latency</li>
+          <li>Implemented offline-first architecture using WatermelonDB</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">React Native</span><span class="tag">WebSockets</span><span class="tag">WatermelonDB</span><span class="tag">Firebase</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-tag">02 — Showcase</div>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-sub">Production apps, internal tools, and experiments — each solving a real problem with a polished mobile experience.</p>
+    </div>
+    <div class="projects-grid">
+
+      <!-- Fintech -->
+      <div class="project-card reveal" style="--delay:.1s">
+        <div class="project-card-header">
+          <div class="project-icon" style="background:rgba(255,255,255,0.06)">💸</div>
+          <div class="project-card-title">FinTrack Pro</div>
+          <div class="project-card-sub">Senior Engineer · Groww</div>
+        </div>
+        <div class="project-screen">
+          <div class="screen-finance" style="height:100%">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+              <span style="font-size:9px;color:#686868;font-family:'DM Mono',monospace">PORTFOLIO VALUE</span>
+              <span style="font-size:9px;color:#C0C0C0;font-family:'DM Mono',monospace">+12.4%</span>
+            </div>
+            <div style="font-size:22px;font-weight:800;font-family:'Gilroy',sans-serif;color:#F0F0F0;margin-bottom:10px">₹4,24,500</div>
+            <div style="flex:1;display:flex;align-items:flex-end;gap:3px">
+              <div style="flex:1;height:40%;background:rgba(255,255,255,.15);border-radius:3px 3px 0 0"></div>
+              <div style="flex:1;height:60%;background:rgba(255,255,255,.22);border-radius:3px 3px 0 0"></div>
+              <div style="flex:1;height:45%;background:rgba(255,255,255,.17);border-radius:3px 3px 0 0"></div>
+              <div style="flex:1;height:80%;background:rgba(255,255,255,.28);border-radius:3px 3px 0 0"></div>
+              <div style="flex:1;height:65%;background:rgba(255,255,255,.22);border-radius:3px 3px 0 0"></div>
+              <div style="flex:1;height:90%;background:linear-gradient(180deg,#FFFFFF,#C0C0C0);border-radius:3px 3px 0 0"></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-desc">Mutual fund & stock discovery platform. Rebuilt the investment flow with a new architecture, shipped AI portfolio advisor, and optimised for 2M+ MAU on older Android devices.</p>
+          <div class="metric-row">
+            <div class="metric"><div class="m-val">2M+</div><div class="m-label">MAU</div></div>
+            <div class="metric"><div class="m-val">40%</div><div class="m-label">FASTER UX</div></div>
+            <div class="metric"><div class="m-val">4.8★</div><div class="m-label">RATING</div></div>
+          </div>
+          <div class="exp-tags" style="margin-bottom:14px">
+            <span class="tag">React Native</span><span class="tag">Redux</span><span class="tag">TypeScript</span><span class="tag">OpenAI</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="plink primary">Play Store ↗</a>
+            <a href="#" class="plink">App Store ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Payments -->
+      <div class="project-card reveal" style="--delay:.2s">
+        <div class="project-card-header">
+          <div class="project-icon" style="background:rgba(255,255,255,0.05)">⚡</div>
+          <div class="project-card-title">Checkout SDK</div>
+          <div class="project-card-sub">Core Engineer · Razorpay</div>
+        </div>
+        <div class="project-screen">
+          <div style="background:linear-gradient(160deg,#0d0d0d,#111111);padding:16px;height:100%;display:flex;flex-direction:column;justify-content:space-between">
+            <div>
+              <div style="font-size:9px;color:#686868;font-family:'DM Mono',monospace;margin-bottom:4px">COMPLETING PAYMENT</div>
+              <div style="font-size:18px;font-weight:800;font-family:'Gilroy',sans-serif;color:#F0F0F0">₹2,499.00</div>
+            </div>
+            <div style="display:flex;gap:6px">
+              <div style="flex:1;height:32px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;display:flex;align-items:center;padding:0 8px"><span style="font-size:9px;color:#C0C0C0;font-family:'DM Mono',monospace">● UPI</span></div>
+              <div style="flex:1;height:32px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;display:flex;align-items:center;padding:0 8px"><span style="font-size:9px;color:#686868;font-family:'DM Mono',monospace">CARD</span></div>
+              <div style="flex:1;height:32px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:8px;display:flex;align-items:center;padding:0 8px"><span style="font-size:9px;color:#686868;font-family:'DM Mono',monospace">NB</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-desc">Native React Native SDK powering checkout for 200K+ Razorpay merchants. Built native bridge modules for iOS & Android, biometric UPI auth, and real-time payment status tracking.</p>
+          <div class="metric-row">
+            <div class="metric"><div class="m-val">200K+</div><div class="m-label">MERCHANTS</div></div>
+            <div class="metric"><div class="m-val">35%</div><div class="m-label">LESS FRICTION</div></div>
+          </div>
+          <div class="exp-tags" style="margin-bottom:14px">
+            <span class="tag">Native Modules</span><span class="tag">Kotlin</span><span class="tag">Swift</span><span class="tag">UPI</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="plink">GitHub ↗</a>
+            <a href="#" class="plink">npm ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI App -->
+      <div class="project-card reveal" style="--delay:.3s">
+        <div class="project-card-header">
+          <div class="project-icon" style="background:rgba(255,255,255,0.06)">🤖</div>
+          <div class="project-card-title">Aria — AI Coach</div>
+          <div class="project-card-sub">Side Project · AI / LLM</div>
+        </div>
+        <div class="project-screen">
+          <div class="screen-ai" style="height:100%;display:flex;flex-direction:column;gap:6px;padding:12px">
+            <div style="background:rgba(255,255,255,.08);border-radius:10px 10px 2px 10px;padding:8px 10px;max-width:85%;align-self:flex-end"><p style="font-size:9px;color:#C0C0C0;line-height:1.4">How should I rebalance my portfolio this quarter?</p></div>
+            <div style="background:rgba(255,255,255,.04);border-radius:2px 10px 10px 10px;padding:8px 10px;max-width:90%"><p style="font-size:9px;color:#686868;line-height:1.4">Based on your risk profile and current holdings, I'd suggest increasing your debt allocation by 10%...</p></div>
+            <div style="margin-top:auto;background:rgba(255,255,255,.04);border-radius:8px;padding:6px 10px;border:1px solid rgba(255,255,255,.08)"><p style="font-size:9px;color:#686868">Ask Aria anything...</p></div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-desc">Personal finance AI coach with voice + text input. Uses GPT-4o with function calling to fetch real portfolio data, suggest rebalancing strategies, and explain market events in plain language.</p>
+          <div class="metric-row">
+            <div class="metric"><div class="m-val">&lt;1.2s</div><div class="m-label">RESPONSE</div></div>
+            <div class="metric"><div class="m-val">GPT-4o</div><div class="m-label">POWERED</div></div>
+          </div>
+          <div class="exp-tags" style="margin-bottom:14px">
+            <span class="tag">OpenAI</span><span class="tag">Whisper</span><span class="tag">Function Calling</span><span class="tag">Expo</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="plink primary">Case Study ↗</a>
+            <a href="#" class="plink">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sales Coaching -->
+      <div class="project-card reveal" style="--delay:.4s">
+        <div class="project-card-header">
+          <div class="project-icon" style="background:rgba(255,255,255,0.05)">📞</div>
+          <div class="project-card-title">Wingman Real-Time</div>
+          <div class="project-card-sub">Solo Mobile Engineer · Wingman YC S21</div>
+        </div>
+        <div class="project-screen">
+          <div style="background:linear-gradient(160deg,#0f0f0f,#0a0a0a);padding:14px;height:100%;display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="width:8px;height:8px;border-radius:50%;background:#AAAAAA;animation:pulse 1.5s infinite"></div>
+              <span style="font-size:10px;color:#AAAAAA;font-family:'DM Mono',monospace">LIVE CALL — 04:23</span>
+            </div>
+            <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:8px">
+              <div style="font-size:8px;color:#AAAAAA;font-family:'DM Mono',monospace;margin-bottom:3px">AI SUGGESTION</div>
+              <div style="font-size:10px;color:#686868;line-height:1.4">Prospect mentioned budget — try anchoring with ROI first.</div>
+            </div>
+            <div style="display:flex;gap:4px;flex-wrap:wrap">
+              <span style="font-size:8px;padding:2px 8px;background:rgba(255,255,255,.04);border-radius:4px;color:#686868">OBJECTION</span>
+              <span style="font-size:8px;padding:2px 8px;background:rgba(255,255,255,.1);border-radius:4px;color:#AAAAAA">PRICING</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <p class="project-card-desc">Real-time AI sales coaching app built from 0→1 as the sole mobile engineer. Streams live suggestions during calls via WebSocket with sub-100ms latency. Offline-first with WatermelonDB.</p>
+          <div class="metric-row">
+            <div class="metric"><div class="m-val">&lt;100ms</div><div class="m-label">LATENCY</div></div>
+            <div class="metric"><div class="m-val">6 WKS</div><div class="m-label">0→1 SHIP</div></div>
+          </div>
+          <div class="exp-tags" style="margin-bottom:14px">
+            <span class="tag">React Native</span><span class="tag">WebSockets</span><span class="tag">WatermelonDB</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="plink">Case Study ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTRIBUTIONS -->
+<section id="contributions" style="background:var(--bg2)">
+  <div class="section-inner">
+    <div class="reveal">
+      <div class="section-tag">03 — Impact</div>
+      <h2 class="section-title">Contributions</h2>
+      <p class="section-sub">Open source, architecture initiatives, performance engineering, and engineering culture contributions.</p>
+    </div>
+    <div class="bento reveal">
+      <div class="bento-card">
+        <div class="stat-big">28%</div>
+        <div class="stat-label">BUNDLE SIZE REDUCED</div>
+        <div class="b-sub" style="margin-top:10px;font-size:13px">Code-splitting strategy across Groww mobile — saved ~1.8MB from the initial download.</div>
+      </div>
+      <div class="bento-card bento-wide">
+        <div class="b-icon">🧩</div>
+        <div class="b-title">rn-perf-toolkit</div>
+        <div class="b-sub">Open-source React Native performance debugging utility — provides a dev-mode HUD for FPS, JS thread usage, memory pressure, and bridgeless mode compatibility. 380+ GitHub stars.</div>
+        <div style="margin-top:14px;display:flex;gap:8px">
+          <span class="tag">React Native</span><span class="tag">TypeScript</span><span class="tag">Native Modules</span>
+          <a href="#" style="margin-left:auto;font-size:12px;color:var(--teal);font-family:'DM Mono',monospace">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="bento-card bento-tall">
+        <div class="b-icon">📊</div>
+        <div class="b-title">Skill Distribution</div>
+        <div class="bar-list">
+          <div class="bar-row">
+            <div class="bar-info"><span style="font-size:12px;color:var(--muted)">React Native</span><span style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace">95%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="95"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-info"><span style="font-size:12px;color:var(--muted)">TypeScript</span><span style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace">90%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="90"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-info"><span style="font-size:12px;color:var(--muted)">Native Modules</span><span style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace">75%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="75"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-info"><span style="font-size:12px;color:var(--muted)">Redux / State</span><span style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace">88%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="88"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-info"><span style="font-size:12px;color:var(--muted)">LLM / AI</span><span style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace">70%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="70"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-info"><span style="font-size:12px;color:var(--muted)">UI / Animation</span><span style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace">82%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="82"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="bar-info"><span style="font-size:12px;color:var(--muted)">CI/CD</span><span style="font-size:12px;color:var(--muted);font-family:'DM Mono',monospace">65%</span></div>
+            <div class="bar-track"><div class="bar-fill" data-w="65"></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="bento-card">
+        <div class="stat-big">99.8%</div>
+        <div class="stat-label">CRASH-FREE SESSIONS</div>
+        <div class="b-sub" style="margin-top:10px;font-size:13px">Maintained across production apps using Sentry + custom error boundary architecture.</div>
+      </div>
+      <div class="bento-card bento-wide">
+        <div class="b-icon">🎓</div>
+        <div class="b-title">Mentorship &amp; Culture</div>
+        <div class="b-sub">Mentored 4 engineers across Groww and Razorpay. Introduced mobile-specific RFC process, internal perf review cadence, and E2E testing culture with Detox.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="fl-tag">// currently open to senior / staff roles</div>
+      <div class="fl-name">Dipankar Giri</div>
+      <div style="font-size:13px;color:var(--muted);margin-top:4px;font-weight:300">Sr. Software Engineer · Gurugram, India</div>
+    </div>
+    <div class="footer-right">
+      <a href="https://linkedin.com" class="foot-link">LinkedIn</a>
+      <a href="https://github.com" class="foot-link">GitHub</a>
+      <a href="mailto:dipankargiri1122@gmail.com" class="foot-link">dipankargiri1122@gmail.com</a>
+    </div>
+  </div>
+  <div class="footer-copy">Built with precision &amp; a mobile-first mindset · © 2025 Dipankar Giri</div>
+</footer>
+
+<script src="scripts/main.js" defer></script>
+</body>
+</html>

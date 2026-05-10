@@ -1,0 +1,62 @@
+/* footer.css — Footer layout, links, and copyright */
+
+footer {
+  padding: 48px 24px;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left .fl-tag {
+  font-size: 12px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
+}
+
+.footer-left .fl-name {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+}
+
+.footer-right {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.foot-link {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted);
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  transition: all 0.2s;
+}
+
+.foot-link:hover {
+  color: var(--text);
+  border-color: var(--border2);
+  background: var(--card);
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 28px;
+  font-size: 12px;
+  color: var(--faint);
+  font-weight: 300;
+}

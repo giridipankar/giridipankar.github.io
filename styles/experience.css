@@ -1,0 +1,110 @@
+/* experience.css — Experience section: timeline grid and cards */
+
+.exp-grid {
+  display: grid;
+  gap: 2px;
+}
+
+.exp-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 28px 32px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.exp-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--blue), var(--teal));
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.exp-item:hover {
+  background: var(--card2);
+  border-color: var(--border2);
+}
+
+.exp-item:hover::before {
+  opacity: 1;
+}
+
+.exp-item:first-child {
+  border-radius: var(--r2) var(--r2) 0 0;
+}
+
+.exp-item:last-child {
+  border-radius: 0 0 var(--r2) var(--r2);
+}
+
+.exp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  gap: 16px;
+}
+
+.exp-company {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+}
+
+.exp-role {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.exp-period {
+  font-size: 12px;
+  font-family: 'DM Mono', monospace;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border2);
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.exp-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.exp-bullets li {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--muted);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.exp-bullets li::before {
+  content: '↳';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+  font-size: 12px;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

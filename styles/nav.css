@@ -1,0 +1,65 @@
+/* nav.css — Top navigation bar */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(20px);
+  background: rgba(8, 8, 8, 0.75);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s;
+}
+
+.nav-logo {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.3px;
+}
+
+.nav-logo span {
+  color: var(--blue);
+}
+
+.nav-links {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-links a {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted);
+  padding: 6px 12px;
+  border-radius: 30px;
+  transition: all 0.2s;
+  letter-spacing: 0.2px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text);
+  background: var(--card2);
+}
+
+.nav-cta {
+  font-size: 13px;
+  font-weight: 800;
+  background: var(--blue);
+  color: #000;
+  padding: 8px 18px;
+  border-radius: 30px;
+  transition: all 0.2s;
+  letter-spacing: 0.2px;
+}
+
+.nav-cta:hover {
+  background: var(--teal);
+  transform: translateY(-1px);
+}

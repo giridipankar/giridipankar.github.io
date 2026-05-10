@@ -1,0 +1,404 @@
+/* hero.css — Hero section, phone mockup, and floating cards */
+
+/* ── Hero Layout ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 24px 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 50%;
+  height: 70%;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ── Hero Content ── */
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 300;
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 24px;
+  letter-spacing: 0.4px;
+}
+
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(1.4); }
+}
+
+h1.hero-name {
+  font-size: clamp(40px, 6vw, 68px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+h1.hero-name span {
+  color: var(--blue);
+}
+
+.hero-title {
+  font-size: clamp(16px, 2vw, 20px);
+  color: var(--muted);
+  font-weight: 300;
+  margin-bottom: 20px;
+  letter-spacing: 0.2px;
+}
+
+.hero-bio {
+  font-size: 15px;
+  color: var(--muted);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+/* ── Skill Chips ── */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.chip {
+  font-size: 11px;
+  font-weight: 300;
+  font-family: 'DM Mono', monospace;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  background: var(--card);
+  letter-spacing: 0.4px;
+}
+
+.chip.blue {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: var(--blue);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.chip.teal {
+  border-color: rgba(192, 192, 192, 0.35);
+  color: var(--teal);
+  background: rgba(192, 192, 192, 0.06);
+}
+
+/* ── CTA Buttons ── */
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 0.2px;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: var(--teal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
+}
+
+.btn-ghost {
+  background: var(--card);
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.btn-ghost:hover {
+  color: var(--text);
+  background: var(--card2);
+  transform: translateY(-1px);
+}
+
+/* ── Platform Badges ── */
+.platform-badges {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.platform-badge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  font-size: 11px;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+/* ── Phone Mockup ── */
+.phone-scene {
+  position: relative;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone {
+  width: 220px;
+  height: 440px;
+  background: linear-gradient(160deg, #1a1a1a, #0d0d0d);
+  border-radius: 38px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%       { transform: translateY(-12px) rotate(-2deg); }
+}
+
+.phone-notch {
+  width: 80px;
+  height: 24px;
+  background: #000;
+  border-radius: 0 0 14px 14px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.phone-screen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #141414, #0d0d0d);
+  border-radius: 37px;
+  overflow: hidden;
+  padding: 40px 16px 20px;
+}
+
+.phone-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.phone-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #555, #888);
+}
+
+.phone-stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.phone-stat {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.phone-stat .label {
+  font-size: 9px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.4px;
+}
+
+.phone-stat .val {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+  color: var(--text);
+}
+
+.phone-chart {
+  height: 64px;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.phone-chart::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.06));
+}
+
+.phone-chart-line {
+  position: absolute;
+  bottom: 16px;
+  left: 8px;
+  right: 8px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--teal), var(--blue));
+  border-radius: 2px;
+}
+
+.phone-list-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+
+.phone-list-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.phone-list-text {
+  flex: 1;
+}
+
+.phone-list-text .t {
+  font-size: 9px;
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+  color: var(--text);
+}
+
+.phone-list-text .s {
+  font-size: 8px;
+  color: var(--muted);
+}
+
+.phone-list-num {
+  font-size: 10px;
+  font-family: 'DM Mono', monospace;
+  color: var(--teal);
+}
+
+/* ── Floating Cards ── */
+.floating-card {
+  position: absolute;
+  background: rgba(10, 10, 10, 0.88);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border2);
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.fc1 {
+  top: 40px;
+  right: -20px;
+  animation: float2 3.5s ease-in-out infinite;
+}
+
+.fc2 {
+  bottom: 80px;
+  left: -30px;
+  animation: float2 4.2s ease-in-out infinite 0.8s;
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+.fc-label {
+  font-size: 10px;
+  color: var(--muted);
+  margin-bottom: 2px;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.3px;
+}
+
+.fc-val {
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 15px;
+}
+
+/* Both floating card values are white/near-white in B&W theme */
+.fc-green { color: var(--teal); }
+.fc-blue  { color: var(--blue); }

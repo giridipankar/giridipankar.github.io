@@ -1,0 +1,178 @@
+/* projects.css — Projects grid, cards, mock screens, and metrics */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* ── Card Shell ── */
+.project-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  overflow: hidden;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Card Header ── */
+.project-card-header {
+  padding: 24px 24px 0;
+  position: relative;
+}
+
+.project-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  /* Force emojis and any remaining color to grayscale */
+  filter: grayscale(1) brightness(1.1);
+}
+
+.project-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+  margin-bottom: 4px;
+}
+
+.project-card-sub {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+/* ── Mini App Screen Preview ── */
+.project-screen {
+  margin: 0 24px;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  /* Render all inline color styles as grayscale — catches any missed values */
+  filter: grayscale(1);
+}
+
+.screen-finance {
+  background: linear-gradient(160deg, #141414, #0a0a0a);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: 100%;
+}
+
+.screen-health {
+  background: linear-gradient(160deg, #121212, #0a0a0a);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: 100%;
+}
+
+.screen-ai {
+  background: linear-gradient(160deg, #141414, #0d0d0d);
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  height: 100%;
+}
+
+/* ── Card Body ── */
+.project-card-body {
+  padding: 20px 24px 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card-desc {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+/* ── Metric Pills ── */
+.metric-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  text-align: center;
+  padding: 8px 14px;
+  background: var(--bg2);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.metric .m-val {
+  font-size: 16px;
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+  /* Override any inline color — all metric values become white */
+  color: var(--text) !important;
+}
+
+.metric .m-label {
+  font-size: 10px;
+  color: var(--muted);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.3px;
+}
+
+/* ── Project Links ── */
+.project-links {
+  display: flex;
+  gap: 8px;
+}
+
+.plink {
+  font-size: 12px;
+  font-weight: 300;
+  padding: 6px 14px;
+  border-radius: 7px;
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.plink:hover {
+  color: var(--text);
+  background: var(--card2);
+}
+
+.plink.primary {
+  background: var(--blue);
+  color: #000;
+  border-color: transparent;
+  font-weight: 800;
+  font-family: 'Gilroy', sans-serif;
+}
+
+.plink.primary:hover {
+  background: var(--teal);
+  transform: translateY(-1px);
+}
