@@ -370,7 +370,7 @@ h1.hero-name span {
 
 .fc1 {
   top: 40px;
-  right: -20px;
+  right: -28px;
   animation: float2 3.5s ease-in-out infinite;
 }
 
@@ -402,3 +402,64 @@ h1.hero-name span {
 /* Both floating card values are white/near-white in B&W theme */
 .fc-green { color: var(--teal); }
 .fc-blue  { color: var(--blue); }
+
+/* ── Tech Stack Icons — bare SVGs, no container, shadow only ──────────────────
+   Phone is 220×440 centred in a 480px-tall × 380px-wide scene.
+   Edges: left=80px, right=300px, bottom≈460px from scene top.
+   Each icon: 48×48, opacity 0.68, drop-shadow for depth.
+   Animations reuse float2 / dedicated keyframes that preserve the base transform.
+────────────────────────────────────────────────────────────────────────────── */
+.stack-icon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  color: var(--text);
+  opacity: 0.68;
+  filter:
+    drop-shadow(0 2px 8px rgba(0, 0, 0, 1))
+    drop-shadow(0 0 18px rgba(0, 0, 0, 0.7));
+  pointer-events: none;
+  z-index: 8;
+}
+
+.stack-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* React Native — centre-left edge of phone */
+.si-rn {
+  left: 0px;                       /* icon centre aligns with phone left edge */
+  top: 50%;
+  transform: translateY(-50%);
+  animation: floatVC 4.2s ease-in-out infinite 0.3s;
+}
+
+/* iOS / Apple — centre-right edge of phone */
+.si-android {
+  right: 16px;                      /* mirror of left */
+  top: 50%;
+  transform: translateY(-50%);
+  animation: floatVC 4.9s ease-in-out infinite 1.7s;
+}
+
+/* Android — bottom-centre of phone */
+.si-ios {
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: floatBC 4.5s ease-in-out infinite 2.5s;
+}
+
+/* Preserves translateY(-50%) while floating */
+@keyframes floatVC {
+  0%, 100% { transform: translateY(-50%); }
+  50%       { transform: translateY(calc(-50% - 9px)); }
+}
+
+/* Preserves translateX(-50%) while floating */
+@keyframes floatBC {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(-9px); }
+}

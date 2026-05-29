@@ -20,6 +20,11 @@
     display: none;
   }
 
+  /* Project grid: collapse to 1 column on mobile */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
   .bento {
     grid-template-columns: 1fr;
   }
