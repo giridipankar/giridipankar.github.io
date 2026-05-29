@@ -21,6 +21,9 @@ nav {
   font-weight: 800;
   font-size: 17px;
   letter-spacing: -0.3px;
+  color: var(--text);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .nav-logo span {
